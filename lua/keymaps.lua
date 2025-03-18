@@ -1,5 +1,5 @@
 -- Keymaps
-vim.keymap.set("n", "<C-s>", ":w<CR>", {})
+--vim.keymap.set("n", "<C-s>", ":w<CR>", {})
 vim.keymap.set("n", "<F5>", ":so %<CR>", {})
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", {})
 vim.keymap.set("n", "<leader>q", ":q<CR>", {})
@@ -22,9 +22,16 @@ vim.keymap.set("n", "<C-k>", ":bnext<CR>", {})
 --vim.keymap.set("n", "<A-l>", ":vertical resize -2<CR>", {})
 
 -- Move lines
---vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", {})
---vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", {})
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", {})
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", {})
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", {})
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", {})
 
 -- Better indenting
 vim.keymap.set("v", "<", "<gv", {})
 vim.keymap.set("v", ">", ">gv", {})
+
+--Fast save and quit
+vim.keymap.set("n", "<leader>w", ":w<CR>", {})
+vim.keymap.set("n", "<leader>q", ":q<CR>", {})
+vim.keymap.set("n", "<leader>x", ":x<CR>", {})
